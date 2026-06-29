@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AYRUS College of Engineering and Technology</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins', sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(135deg,#0a0f2c,#1a1145,#0b1220);
+color:#fff;
+}
+
+/* NAV */
+nav{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+background:rgba(20,10,50,0.6);
+backdrop-filter: blur(12px);
+z-index:1000;
+border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+nav h1{
+color:#a78bfa;
+font-size:18px;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:18px;
+}
+
+nav ul li a{
+color:#fff;
+text-decoration:none;
+font-size:13px;
+padding:5px 8px;
+border-radius:6px;
+transition:0.3s;
+}
+
+nav ul li a.active,
+nav ul li a:hover{
+background:#a78bfa;
+color:#000;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:radial-gradient(circle at top,#6d28d9,#0b1220);
+padding:20px;
+}
+
+.hero h2{
+font-size:50px;
+}
+
+.hero p{
+color:#cbd5e1;
+margin-top:10px;
+}
+
+.btn{
+margin-top:20px;
+padding:12px 25px;
+border:none;
+background:#a78bfa;
+color:#000;
+font-weight:600;
+border-radius:8px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+/* SECTIONS */
+section{
+padding:90px 20px;
+max-width:1100px;
+margin:auto;
+}
+
+.title{
+text-align:center;
+font-size:30px;
+margin-bottom:35px;
+color:#a78bfa;
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:18px;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.1);
+padding:20px;
+border-radius:12px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+background:rgba(167,139,250,0.15);
+}
+
+/* STATS */
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+text-align:center;
+}
+
+.stats div{
+padding:20px;
+background:rgba(255,255,255,0.05);
+border-radius:12px;
+}
+
+/* CONTACT */
+input,textarea{
+width:100%;
+padding:12px;
+margin-top:10px;
+border:none;
+border-radius:8px;
+outline:none;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:20px;
+background:#050414;
+border-top:1px solid rgba(255,255,255,0.1);
+}
+
+/* BACK TO TOP */
+#topBtn{
+position:fixed;
+bottom:20px;
+right:20px;
+padding:10px 15px;
+border:none;
+border-radius:50%;
+background:#a78bfa;
+cursor:pointer;
+display:none;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<h1>AYRUS College</h1>
+<ul>
+<li><a href="#home" class="nav-link">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#courses">Courses</a></li>
+<li><a href="#departments">Departments</a></li>
+<li><a href="#faculty">Faculty</a></li>
+<li><a href="#placements">Placements</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+<div>
+<h2>AYRUS College of Engineering</h2>
+<p>Innovation • Technology • Future Leaders</p>
+<button class="btn" onclick="document.getElementById('about').scrollIntoView()">Explore</button>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+<h2 class="title">About Us</h2>
+<p style="text-align:center;color:#cbd5e1;max-width:800px;margin:auto;">
+We build future engineers with strong technical knowledge, innovation mindset and leadership skills.
+</p>
+</section>
+
+<!-- STATS -->
+<section>
+<h2 class="title">Our Achievements</h2>
+<div class="stats">
+<div>95% Placement</div>
+<div>120+ Recruiters</div>
+<div>12 LPA Highest</div>
+<div>50+ Projects</div>
+</div>
+</section>
+
+<!-- COURSES -->
+<section id="courses">
+<h2 class="title">Courses</h2>
+<div class="grid">
+<div class="card">AI & Data Science</div>
+<div class="card">CSE</div>
+<div class="card">ECE</div>
+<div class="card">Mechanical</div>
+<div class="card">Civil</div>
+</div>
+</section>
+
+<!-- DEPARTMENTS -->
+<section id="departments">
+<h2 class="title">Departments</h2>
+<div class="grid">
+<div class="card">CSE</div>
+<div class="card">AI & DS</div>
+<div class="card">ECE</div>
+<div class="card">Mechanical</div>
+</div>
+</section>
+
+<!-- FACULTY -->
+<section id="faculty">
+<h2 class="title">Faculty</h2>
+<div class="grid">
+<div class="card">Senior Professors</div>
+<div class="card">Industry Experts</div>
+<div class="card">Research Guides</div>
+</div>
+</section>
+
+<!-- PLACEMENTS -->
+<section id="placements">
+<h2 class="title">Placements</h2>
+<div class="grid">
+<div class="card">TCS, Infosys, Wipro</div>
+<div class="card">95% Placement Rate</div>
+<div class="card">Highest 12 LPA</div>
+<div class="card">Hackathon Winners</div>
+</div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section>
+<h2 class="title">Student Reviews</h2>
+<div class="grid">
+<div class="card">"Best campus experience!"</div>
+<div class="card">"Amazing faculty support."</div>
+<div class="card">"Great placement training."</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2 class="title">Contact Us</h2>
+<form onsubmit="return sendMsg()">
+<input type="text" placeholder="Name" required>
+<input type="email" placeholder="Email" required>
+<textarea rows="5" placeholder="Message"></textarea>
+<button class="btn">Send</button>
+</form>
+</section>
+
+<footer>
+© 2026 AYRUS College of Engineering and Technology
+</footer>
+
+<button id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+function sendMsg(){
+alert("Message sent successfully!");
+return false;
+}
+
+// NAV ACTIVE
+const links = document.querySelectorAll(".nav-link");
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+let current = "";
+
+sections.forEach(sec => {
+if(pageYOffset >= sec.offsetTop - 120){
+current = sec.getAttribute("id");
+}
+});
+
+links.forEach(link => {
+link.classList.remove("active");
+if(link.getAttribute("href").includes(current)){
+link.classList.add("active");
+}
+});
+
+// back to top button
+document.getElementById("topBtn").style.display =
+window.scrollY > 300 ? "block" : "none";
+});
+</script>
+
+</body>
+</html>
